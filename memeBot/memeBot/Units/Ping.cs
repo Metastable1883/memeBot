@@ -9,9 +9,21 @@ namespace memeBot.Units
     public class Ping : ModuleBase<SocketCommandContext>
     {
         [Command("ping")]
-        public async Task PingAsync()
+        public async Task PingAsync([Remainder] string echo)
         {
-            await ReplyAsync("HELLO CHILDRENS");
+               
+                for (int i = 0; i < 10; i++)
+                {
+                    await ReplyAsync(echo);
+                }
+            
+
+        }
+        [Command("ping")]
+        public async Task PingAsync() {
+            await ReplyAsync("`You Must Enter a Parameter to ping`");
+            
         }
     }
 }
+
