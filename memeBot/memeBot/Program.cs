@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generric;
+using System.linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace memeBot
 {
@@ -6,7 +11,8 @@ namespace memeBot
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MyBot bot = new MyBot();
+
         }
     }
 }
