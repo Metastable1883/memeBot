@@ -12,17 +12,12 @@ namespace memeBot
 {
     class MyBot
     {
-        DiscordSocketClient Discord;
+        DiscordSocketClient discord;
 
         public MyBot() {
-            Discord = new DiscordSocketClient(x =>
-            {
-                x.LogLevel = LogSeverity.Info;
-            }
-                
-                );
+            discord = new DiscordSocketClient();
 
-                }
+        }
 
 
     }
