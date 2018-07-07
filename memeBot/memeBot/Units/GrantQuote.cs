@@ -6,44 +6,45 @@ using System.Threading.Tasks;
 
 namespace memeBot.Units
 {
-    public class Roast : ModuleBase<SocketCommandContext>
+    class GrantQuote : ModuleBase<SocketCommandContext>
     {
-        [Command("roast")]
-        public async Task RektAsync([Remainder] string echo)
+        [Command("grant")]
+        public async Task GrantAsync()
         {
-            string user = echo;
+            string user = " ";
 
             int part1 = new Random().Next(0, 7);
 
             switch (part1)
             {
                 case 0:
-                    user += " has silly kneecaps";
+                    user += "Taking a test is kind of like running a marathon";
                     break;
                 case 1:
-                    user += " no u";
+                    user += "Can you read the Quote of the day";
                     break;
                 case 2:
-                    user += " needs Serious help";
+                    user += "VINNYYYYYYY";
                     break;
                 case 3:
-                    user += " is the reason the gene pool needs a lifeguard";
+                    user += "I once owned a pizza resturant";
                     break;
                 case 4:
-                    user += " plays fortnite";
+                    user += "No Games";
                     break;
                 case 5:
-                    user += " needs to go home and rethink their life";
+                    user += "Stop Playing League";
                     break;
                 case 6:
-                    user += " drinks too much soda";
+                    user += "Hidden Grant Found";
                     break;
                 case 7:
-                    user += " uses a sniper rifle in GTA";
+                    user += "Lets Take a Survey";
                     break;
+
+                   
             }
             await ReplyAsync(user + "");
-
         }
     }
 }
