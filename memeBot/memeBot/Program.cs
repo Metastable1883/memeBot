@@ -54,6 +54,7 @@ namespace memeBot
             _client.Log += Log;
 
 
+
             await RegisterCommandAsync();
 
             await _client.LoginAsync(TokenType.Bot, botToken);
