@@ -75,6 +75,7 @@ namespace memeBot.Units
                     deathMessage += "You ";
                     break;
             }
+            
             await ReplyAsync(deathMessage + "");
         }
     }
