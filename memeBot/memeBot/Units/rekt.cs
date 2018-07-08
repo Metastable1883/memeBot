@@ -13,7 +13,7 @@ namespace memeBot.Units
         public async Task RektAsync([Remainder] string echo)
         {
             string deathMessage = "```Incoming Transmission:```\n" + echo;
-
+            
             string[] part1 =
             {
                 " was massacred with ",
@@ -48,7 +48,7 @@ namespace memeBot.Units
                 "that guy over there",
                 "a turtle"
             };
-
+            
             deathMessage += part3[new Random().Next(0, part3.Length)] + "*.";
 
             await ReplyAsync(deathMessage + "");
