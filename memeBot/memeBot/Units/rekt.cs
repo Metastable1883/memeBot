@@ -6,75 +6,51 @@ using System.Threading.Tasks;
 
 namespace memeBot.Units
 {
+    
     public class Rekt : ModuleBase<SocketCommandContext>
     {
         [Command("rekt")]
         public async Task RektAsync([Remainder] string echo)
         {
-            string deathMessage = echo;
+            string deathMessage = "```Incoming Transmission:```\n" + echo;
 
-            int part1 = new Random().Next(0, 4);
-
-            switch (part1)
+            string[] part1 =
             {
-                case 0:
-                    deathMessage += " was massacred with ";
-                    break;
-                case 1:
-                    deathMessage += " was hugged with ";
-                    break;
-                case 2:
-                    deathMessage += " was consumed with ";
-                    break;
-                case 3:
-                    deathMessage += " was nuked with ";
-                    break;
-                case 4:
-                    deathMessage += " was slain with ";
-                    break;
-            }
+                " was massacred with ",
+                " was hugged with ",
+                " was consumed with ",
+                " was nuked with ",
+                " was slain with "
+            };
 
-            int part2 = new Random().Next(0, 4);
-            switch (part2)
+            deathMessage += part1[new Random().Next(0, part1.Length)];
+
+            string[] part2 =
             {
-                case 0:
-                    deathMessage += "knives ";
-                    break;
-                case 1:
-                    deathMessage += "fruits ";
-                    break;
-                case 2:
-                    deathMessage += "disease ";
-                    break;
-                case 3:
-                    deathMessage += "scorpions ";
-                    break;
-                case 4:
-                    deathMessage += "love ";
-                    break;
-            }
+                "knives ",
+                "fruits ",
+                "disease ",
+                "scorpions ",
+                "love "
+            };
 
-            deathMessage += "by ";
+            deathMessage += part2[new Random().Next(0, part2.Length)];
 
-            int part3 = new Random().Next(0, 4);
-            switch (part3)
+            deathMessage += "by *";
+
+            string[] part3 =
             {
-                case 0:
-                    deathMessage += "Kim Jong Un ";
-                    break;
-                case 1:
-                    deathMessage += "Donald Trump ";
-                    break;
-                case 2:
-                    deathMessage += "Vladimir Putin ";
-                    break;
-                case 3:
-                    deathMessage += "Me ";
-                    break;
-                case 4:
-                    deathMessage += "You ";
-                    break;
-            }
+                "Kim Jong Un ",
+                "Donald Trump ",
+                "Vladimir Putin ",
+                "Me ",
+                "You ",
+                "that guy over there",
+                "a turtle"
+            };
+
+            deathMessage += part3[new Random().Next(0, part3.Length)] + "*.";
+
             await ReplyAsync(deathMessage + "");
         }
     }

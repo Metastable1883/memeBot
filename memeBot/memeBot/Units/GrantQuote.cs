@@ -6,46 +6,29 @@ using System.Threading.Tasks;
 
 namespace memeBot.Units
 {
-    public class GrantQoute : ModuleBase<SocketCommandContext>
+    public class GrantQuote : ModuleBase<SocketCommandContext>
     {
-        [Command("grantquote")]
-        public async Task RektAsync()
+        [Command("grant")]
+        public async Task GrantAsync()
         {
-            string user = "";
-
-            int part1 = new Random().Next(0, 7);
-
-            switch (part1)
+            string user = " ";
+            string[] x =
             {
-                case 0:
-                    user += "Taking a test is kind of like running a marathon";
-                    break;
-                case 1:
-                    user += "Can you read the Quote of the day";
-                    break;
-                case 2:
-                    user += "VINNYYYYYYY";
-                    break;
-                case 3:
-                    user += "I once owned a pizza resturant";
-                    break;
-                case 4:
-                    user += "No Games";
-                    break;
-                case 5:
-                    user += "Stop Playing League";
-                    break;
-                case 6:
-                    user += "Hidden Grant Found";
-                    break;
-                case 7:
-                    user += "Lets Take a Survey";
-                    break;
+                "Taking a test is kind of like running a marathon",
+                "Can you read the Quote of the day",
+                "VINNYYYYYYY",
+                "I once owned a pizza resturant",
+                "No Games",
+                "Stop Playing League",
+                "Hidden Grant Found",
+                "Lets Take a Survey"
+            };
+            int index = new Random().Next(0, x.Length);
 
-
-            }
+            user += x[index];
             await ReplyAsync(user + "");
-
         }
+            
+        
     }
 }
