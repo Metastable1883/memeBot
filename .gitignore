@@ -6,7 +6,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-Program.cs
+memeBot/memeBot/Program.cs
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
