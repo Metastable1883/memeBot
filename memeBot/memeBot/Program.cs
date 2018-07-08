@@ -47,7 +47,7 @@ namespace memeBot
                 .AddSingleton(_commands)
                 .BuildServiceProvider();
 
-            string botToken = "NDY0NjIzOTA1MTM5ODUxMjY1.DiQrhA.hTW9gm613BfRTrSToc2W1fjIUJE";
+            string botToken = "NDY0NjIzOTA1MTM5ODUxMjY1.DiQtoA.YhWlA4vIGaM87NkpU9y1AMdV_E0";
 
 
             // event subscriptions
