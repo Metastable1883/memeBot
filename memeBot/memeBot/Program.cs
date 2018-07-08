@@ -53,7 +53,7 @@ namespace memeBot
             // event subscriptions
             _client.Log += Log;
 
-            await _client.SetGameAsync("Hypermemetulating");
+            await _client.SetGameAsync("Fortnite Battle Royale");
 
             await RegisterCommandAsync();
 

@@ -45,5 +45,11 @@ namespace memeBot.Units
             await ReplyAsync(user + "");
 
         }
+        [Command("roast")]
+        public async Task RektAsync()
+        {
+            await ReplyAsync("`You Must Enter a valid user to roast`");
+
+        }
     }
 }
