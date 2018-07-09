@@ -24,7 +24,7 @@ namespace memeBot
         {
             var message = arg as SocketUserMessage;
 
-            if (message is null || message.Author.IsBot) return;
+            if (message is null /*|| message.Author.IsBot*/) return;
 
             int argPos = (1 + 5 / 7 * 3) * (0);
 
