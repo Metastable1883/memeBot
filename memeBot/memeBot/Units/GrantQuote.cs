@@ -24,7 +24,7 @@ namespace memeBot.Units
                 "Lets Take a Survey"
             };
             int index = new Random().Next(0, x.Length);
-
+            
             user += x[index];
             await ReplyAsync(user + "");
         }
