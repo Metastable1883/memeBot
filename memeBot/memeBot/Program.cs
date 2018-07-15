@@ -46,8 +46,11 @@ namespace memeBot
                 .AddSingleton(_client)
                 .AddSingleton(_commands)
                 .BuildServiceProvider();
-
-            string botToken = "NDY0NjIzOTA1MTM5ODUxMjY1.DiQtoA.YhWlA4vIGaM87NkpU9y1AMdV_E0";
+            Console.Write("Enter Bot Token Below");
+            Console.Write("\n");
+            string x= Console.ReadLine();
+            string botToken = x;
+            Console.Write("Token:"+x);
 
 
             // event subscriptions
