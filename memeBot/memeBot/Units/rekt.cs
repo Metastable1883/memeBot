@@ -18,14 +18,14 @@ namespace memeBot.Units
         public async Task RektAsync([Remainder] string echo)
         {
             
-            if (echo.Equals(Context.User.Mention) || echo.Contains("464623905139851265")) { await ReplyAsync("*But you refused.*");return; }
+            if (echo.Equals(Context.User.Mention) || echo.Contains("467921349852135426")) { await ReplyAsync("*But you refused.*");return; }
             string deathMessage = "";
 
             deathMessage += "" + Context.User.Mention + " ordered the termination of " + echo;
 
-            deathMessage += "\n[☢️] The attack dealt **" + new Random().Next(300, 1000) + " damage**";
+            
 
-            deathMessage += "\n\t**" + echo;
+            deathMessage += "\n**" + echo;
 
             string thingtokill = echo;
             string[] part1 =
@@ -101,7 +101,7 @@ namespace memeBot.Units
 
             deathMessage += ".**";
 
-            
+            deathMessage += "\n\t[☢️] The attack dealt **" + new Random().Next(300, 1000) + " damage**";
 
             deathMessage += "\n[💀] " + thingtokill + " was ***#REKT!***";
 
