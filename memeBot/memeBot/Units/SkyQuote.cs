@@ -66,10 +66,46 @@ namespace memeBot.Units
                 "EXPOSED.",
                 "Keep your breaks short. 'Cause if they get longer, you'll need breaks from your breaks.",
                 "JUST DO IT. If you slow down, it's harder to speed up again.",
-                "A person who dares waste an hour of time has not yet discovered the value of life."
+                "A person who dares waste an hour of time has not yet discovered the value of life.",
+                "2 + 2 = 5",
+                "Hit Confirmed",
+                "The loveliest rose can hide the cruelest thorn.",
+                "42",
+                "Try integrating a teapot some time.",
+                "Break a leg. That's some pretty stupid advice.",
+                "Peoples is a real word",
+                "Say something enough times and it becomes true.",
+                "Never let you leave. Never let you rest.",
+                "Conglatulations",
+                "Make math your _____",
+                "Have fun with that.",
+                "How was it? It was fun. . . . . to watch people squirm",
+                "Mutually Assured Destruction is bad.",
+                "Is your life as bland as this text?",
+                "9 + 10 = 21. Do a bunch of janky sig figs and that happens.",
+                "More on that... later.",
+                "Luck is just skill that you don't realize at the moment",
+                "Magic is science we don't understand yet.",
+                "Science is magic we don't understand yet.",
+                "Pickle",
+                "Alexa, play despacito https://www.youtube.com/watch?v=kJQP7kiw5Fk",
+                "You may be alive, but there are different *forms* of alive.",
+                "The Twilight Zone",
+                "The light is at the end of the tunnel! Just a quick drop through the center of the earth to get to it on the other side!",
+                "I do agree with your point, but the execution could be a bit better.",
+                "Stupid Entropy!!!",
+                "You can't handle the truth!",
+                "Glory to the king, death to bad government.",
+                "If men were angels we wouldn't need a government.",
+                "I'm afraid I can't do that >:)",
+                "Money is the root of all evil (but there are different *forms* of evil)",
+                "Idle hands are the devil's playground",
+                "The last 10% is 90% of the work.",
+                "Stop token scraping!",
+                "It's a trap!"
             };
             int index = new Random().Next(0, x.Length);
-            text += "```" + x[index] + "\n -SkyTechBytes```";
+            text += "```" + x[index] + "\n -Sky```";
             await ReplyAsync(text);
         }
             
