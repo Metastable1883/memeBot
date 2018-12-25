@@ -11,6 +11,7 @@ namespace memeBot.Units
         [Command("sky")]
         public async Task SkyAsync()
         {
+           
             string text = " ";
             string[] x =
             {
@@ -106,6 +107,7 @@ namespace memeBot.Units
             };
             int index = new Random().Next(0, x.Length);
             text += "```" + x[index] + "\n -Sky```";
+            
             await ReplyAsync(text);
         }
             

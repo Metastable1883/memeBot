@@ -65,6 +65,7 @@ namespace memeBot
             await _client.StartAsync();
 
             await Task.Delay(-1);   
+            
         }
 
         private Task Log(LogMessage arg)

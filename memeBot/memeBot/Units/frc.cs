@@ -11,14 +11,23 @@ namespace memeBot.Units
         [Command("frc")]
         public async Task frcAsync([Remainder] string echo)
         {
-            await ReplyAsync("https://www.thebluealliance.com/team/"+echo);
-              
-            
+            var isNumeric = int.TryParse(echo, out int n);
+
+            if (isNumeric && n < 10000)
+            {
+
+                await ReplyAsync("```https://www.thebluealliance.com/team/" + n +"```");
+
+            }
+            else
+            {
+                await ReplyAsync("```NaN or not valid team```");
+            }
 
         }
         [Command("frc")]
         public async Task PingAsync() {
-            await ReplyAsync("`You Must Enter a team number`");
+            await ReplyAsync("```You Must Enter a team number```");
             
         }
     }

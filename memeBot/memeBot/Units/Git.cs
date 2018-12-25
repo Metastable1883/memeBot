@@ -11,14 +11,14 @@ namespace memeBot.Units
         [Command("git")]
         public async Task frcAsync([Remainder] string echo)
         {
-            await ReplyAsync("https://github.com/" + echo);
+            await ReplyAsync("```https://github.com/" + echo + "```");
               
             
 
         }
         [Command("git")]
         public async Task PingAsync() {
-            await ReplyAsync("`You Must Enter a valid user`");
+            await ReplyAsync("```You Must Enter a valid user```");
             
         }
     }

@@ -26,7 +26,7 @@ namespace memeBot.Units
             int index = new Random().Next(0, x.Length);
             
             user += x[index];
-            await ReplyAsync(user + "");
+            await ReplyAsync("```" + user + "\n -Mr. Grant```");
         }
             
         

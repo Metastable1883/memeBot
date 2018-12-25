@@ -101,9 +101,9 @@ namespace memeBot.Units
 
             deathMessage += ".**";
 
-            deathMessage += "\n\t[☢️] The attack dealt **" + new Random().Next(300, 1000) + " damage**";
+            deathMessage += "\n\t```☢️ The attack dealt " + new Random().Next(300, 1000) + " damage```";
 
-            deathMessage += "\n[💀] " + thingtokill + " was ***#REKT!***";
+            deathMessage += "\n💀 " + thingtokill + " was ***#REKT!***";
 
             await ReplyAsync(deathMessage);
         }
