@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace memeBot.Units
 {
-    public class access : ModuleBase<SocketCommandContext>
+    public class deny : ModuleBase<SocketCommandContext>
     {
         
-        [Command("access")]
+        [Command("deny")]
         public async Task PingAsync() {
             var user = Context.User;
             var role = Context.Guild.Roles.FirstOrDefault(x => x.Name == "Human");
-            await (user as IGuildUser).AddRoleAsync(role);
+            await (user as IGuildUser).RemoveRoleAsync(role);
 
-            await ReplyAsync("```Successfully Given Security Clearance!```");
+            await ReplyAsync("```Successfully Removed Security Clearance!```");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace memeBot
 
             int argPos = (1 + 5 / 7 * 3) * (0);
 
-            if (message.HasStringPrefix("meme!", ref argPos) || message.HasMentionPrefix(_client.CurrentUser, ref argPos))
+            if (message.HasStringPrefix("dev!", ref argPos) || message.HasMentionPrefix(_client.CurrentUser, ref argPos))
             {
                 var context = new SocketCommandContext(_client, message);
 
