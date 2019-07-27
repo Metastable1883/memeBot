@@ -11,7 +11,7 @@ namespace memeBot.Units
         [Command("roast")]
         public async Task RektAsync([Remainder] string echo)
         {
-            string user = "```" + echo;
+            string user = "" + echo;
 
             int part1 = new Random().Next(0, 7);
 
@@ -42,7 +42,7 @@ namespace memeBot.Units
                     user += " uses a sniper rifle in GTA";
                     break;
             }
-            await ReplyAsync(user + "```");
+            await ReplyAsync(user + "");
 
         }
         [Command("roast")]

@@ -57,7 +57,7 @@ namespace memeBot
             // event subscriptions
             _client.Log += Log;
 
-            await _client.SetGameAsync("Fortnite Battle Royale");
+            await _client.SetGameAsync("Minecraft");
 
             await RegisterCommandAsync();
 
