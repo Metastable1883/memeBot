@@ -23,14 +23,18 @@ namespace memeBot.Units
             var three = Context.Guild.Roles.FirstOrDefault(x => x.Name == "Tier Three");
             SocketRole[] roles = { one, two, three };
 
+            List<string> names = new List<string>();
+            
             foreach (IGuildUser user in users) {
+                if (user.Id == 268928066858778624) { continue; }
+                names.Add(user.Username);
                 await (user as IGuildUser).RemoveRolesAsync(roles);
             }
             string msg = "```---New Roles---\n";
             foreach (IGuildUser user in users)
             {
                 IGuildUser guildUser = user as IGuildUser;
-                
+                if (guildUser.Id == 268928066858778624) { continue; }
                 switch (new Random().Next(0, 3))
                 {
                     case 0:
@@ -47,7 +51,13 @@ namespace memeBot.Units
                         break;
                 }
 
-
+                int index = new Random().Next(0, names.Count);
+                await guildUser.ModifyAsync(x =>//to this day this symbol befuddles me
+                {
+                    x.Nickname = names[index];// this is how you get, instead of a method, but...
+                }
+                );
+                names.RemoveAt(index);//this is for some reason how you remove
             }
             await ReplyAsync(msg + "Reassignment Complete!```");
         }
